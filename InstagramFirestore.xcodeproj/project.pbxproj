@@ -140,6 +140,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7A844AC27EEC3CB0062D461 /* Build configuration list for PBXNativeTarget "InstagramFirestore" */;
 			buildPhases = (
+				D7A844C427EEDD9A0062D461 /* ShellScript */,
 				D7A8449427EEC3C80062D461 /* Sources */,
 				D7A8449527EEC3C80062D461 /* Frameworks */,
 				D7A8449627EEC3C80062D461 /* Resources */,
@@ -198,6 +199,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D7A844C427EEDD9A0062D461 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D7A8449427EEC3C80062D461 /* Sources */ = {
