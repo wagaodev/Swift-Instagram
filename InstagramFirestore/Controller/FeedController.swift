@@ -40,3 +40,11 @@ extension FeedController {
     return cell
   }
 }
+
+  // MARK: - UICollectionViewDelegateFlowLayout
+
+extension FeedController: UICollectionViewDelegateFlowLayout {
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    return CGSize(width: view.frame.width, height: 200)
+  }
+}
