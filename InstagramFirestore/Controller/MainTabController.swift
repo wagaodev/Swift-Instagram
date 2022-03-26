@@ -44,5 +44,4 @@ class MainTabController: UITabBarController {
 
     return nav
   }
-
 }
