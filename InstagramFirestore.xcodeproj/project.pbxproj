@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D73D7B2B27EF15570051CACC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73D7B2A27EF15570051CACC /* Extensions.swift */; };
+		D73D7B2E27EF15800051CACC /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = D73D7B2D27EF15800051CACC /* JGProgressHUD */; };
 		D7A8449C27EEC3C80062D461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A8449B27EEC3C80062D461 /* AppDelegate.swift */; };
 		D7A8449E27EEC3C80062D461 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A8449D27EEC3C80062D461 /* SceneDelegate.swift */; };
 		D7A844A027EEC3C80062D461 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A8449F27EEC3C80062D461 /* ViewController.swift */; };
@@ -20,10 +22,10 @@
 		D7A844C127EEC8CA0062D461 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A844C027EEC8CA0062D461 /* ProfileController.swift */; };
 		D7A844C327EEC8D70062D461 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A844C227EEC8D70062D461 /* NotificationController.swift */; };
 		D7D46CFC27EF0E4C00D2EA66 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D46CFB27EF0E4C00D2EA66 /* FeedCell.swift */; };
-		D7D46CFE27EF103300D2EA66 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D46CFD27EF103300D2EA66 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D73D7B2A27EF15570051CACC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = SOURCE_ROOT; };
 		D7A8449827EEC3C80062D461 /* InstagramFirestore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramFirestore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A8449B27EEC3C80062D461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7A8449D27EEC3C80062D461 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,7 +41,6 @@
 		D7A844C027EEC8CA0062D461 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		D7A844C227EEC8D70062D461 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		D7D46CFB27EF0E4C00D2EA66 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
-		D7D46CFD27EF103300D2EA66 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = ../../../../../Downloads/Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D73D7B2E27EF15800051CACC /* JGProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +94,7 @@
 		D7A844AF27EEC6620062D461 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				D7D46CFD27EF103300D2EA66 /* Extensions.swift */,
+				D73D7B2A27EF15570051CACC /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -156,6 +158,9 @@
 			dependencies = (
 			);
 			name = InstagramFirestore;
+			packageProductDependencies = (
+				D73D7B2D27EF15800051CACC /* JGProgressHUD */,
+			);
 			productName = InstagramFirestore;
 			productReference = D7A8449827EEC3C80062D461 /* InstagramFirestore.app */;
 			productType = "com.apple.product-type.application";
@@ -184,6 +189,9 @@
 				Base,
 			);
 			mainGroup = D7A8448F27EEC3C70062D461;
+			packageReferences = (
+				D73D7B2C27EF15800051CACC /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
+			);
 			productRefGroup = D7A8449927EEC3C80062D461 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -240,7 +248,7 @@
 				D7A844B927EEC78A0062D461 /* MainTabController.swift in Sources */,
 				D7A8449E27EEC3C80062D461 /* SceneDelegate.swift in Sources */,
 				D7A844C327EEC8D70062D461 /* NotificationController.swift in Sources */,
-				D7D46CFE27EF103300D2EA66 /* Extensions.swift in Sources */,
+				D73D7B2B27EF15570051CACC /* Extensions.swift in Sources */,
 				D7A844C127EEC8CA0062D461 /* ProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,6 +467,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D73D7B2C27EF15800051CACC /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D73D7B2D27EF15800051CACC /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D73D7B2C27EF15800051CACC /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D7A8449027EEC3C70062D461 /* Project object */;
 }

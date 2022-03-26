@@ -5,7 +5,7 @@ class FeedCell: UICollectionViewCell {
 
   // MARK: - Properties
 
-  private let profileImageView = UIImageView = {
+  private let profileImageView: UIImageView = {
     let iv = UIImageView()
     iv.contentMode = .scaleAspectFit
     iv.clipsToBounds = true
