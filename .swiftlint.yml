@@ -3,6 +3,8 @@ disabled_rules: # rule identifiers to exclude from running
   - nesting
   - function_parameter_count
   - vertical_whitespace
+  - opening_brace
+  - leading_whitespace
 identifier_name:
   allowed_symbols: "_"
 line_length:

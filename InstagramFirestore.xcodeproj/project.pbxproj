@@ -19,6 +19,8 @@
 		D7A844BF27EEC8BF0062D461 /* ImageSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A844BE27EEC8BF0062D461 /* ImageSelectorController.swift */; };
 		D7A844C127EEC8CA0062D461 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A844C027EEC8CA0062D461 /* ProfileController.swift */; };
 		D7A844C327EEC8D70062D461 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A844C227EEC8D70062D461 /* NotificationController.swift */; };
+		D7D46CFC27EF0E4C00D2EA66 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D46CFB27EF0E4C00D2EA66 /* FeedCell.swift */; };
+		D7D46CFE27EF103300D2EA66 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D46CFD27EF103300D2EA66 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		D7A844BE27EEC8BF0062D461 /* ImageSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectorController.swift; sourceTree = "<group>"; };
 		D7A844C027EEC8CA0062D461 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		D7A844C227EEC8D70062D461 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		D7D46CFB27EF0E4C00D2EA66 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		D7D46CFD27EF103300D2EA66 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = ../../../../../Downloads/Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 		D7A844AF27EEC6620062D461 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D7D46CFD27EF103300D2EA66 /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 		D7A844B627EEC6F90062D461 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D7D46CFB27EF0E4C00D2EA66 /* FeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -226,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7A844A027EEC3C80062D461 /* ViewController.swift in Sources */,
+				D7D46CFC27EF0E4C00D2EA66 /* FeedCell.swift in Sources */,
 				D7A844BF27EEC8BF0062D461 /* ImageSelectorController.swift in Sources */,
 				D7A844BD27EEC8B10062D461 /* SearchController.swift in Sources */,
 				D7A8449C27EEC3C80062D461 /* AppDelegate.swift in Sources */,
@@ -233,6 +240,7 @@
 				D7A844B927EEC78A0062D461 /* MainTabController.swift in Sources */,
 				D7A8449E27EEC3C80062D461 /* SceneDelegate.swift in Sources */,
 				D7A844C327EEC8D70062D461 /* NotificationController.swift in Sources */,
+				D7D46CFE27EF103300D2EA66 /* Extensions.swift in Sources */,
 				D7A844C127EEC8CA0062D461 /* ProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
