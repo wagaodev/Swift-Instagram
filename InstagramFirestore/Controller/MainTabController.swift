@@ -32,4 +32,9 @@ class MainTabController: UITabBarController {
     viewControllers = [feed, search, imageSelector, notifications, profile]
   }
   
+  func templateNavigationController(unselectedImage: UIImage, selectedImage: UIImage,
+                                    rootViewController: UIViewController) -> UINavigationController {
+    
+  }
+  
 }
