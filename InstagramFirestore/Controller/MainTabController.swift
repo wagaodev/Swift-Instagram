@@ -9,6 +9,7 @@ class MainTabController: UITabBarController {
   override func viewDidLoad() {
     super.viewDidLoad()
     configureViewController()
+    configureTabBar()
   }
 
   // MARK: - API
@@ -17,9 +18,17 @@ class MainTabController: UITabBarController {
 
   // MARK: - Helpers
 
+  func configureTabBar() {
+    self.tabBar.isTranslucent = true
+    self.tabBar.backgroundColor = UIColor.systemGray5
+    self.tabBar.tintColor = .black
+  }
+
   func configureViewController() {
     view.backgroundColor = .white
-    let feed = templateNavigationController(unselectedImage: #imageLiteral(resourceName: "home_unselected"), selectedImage: #imageLiteral(resourceName: "home_selected"), rootViewController: FeedController())
+
+    let layout = UICollectionViewFlowLayout()
+    let feed = templateNavigationController(unselectedImage: #imageLiteral(resourceName: "home_unselected"), selectedImage: #imageLiteral(resourceName: "home_selected"), rootViewController: FeedController(collectionViewLayout: layout))
     let search = templateNavigationController(unselectedImage: #imageLiteral(resourceName: "search_unselected"), selectedImage: #imageLiteral(resourceName: "search_selected"), rootViewController: SearchController())
     let imageSelector = templateNavigationController(unselectedImage: #imageLiteral(resourceName: "plus_unselected"), selectedImage: #imageLiteral(resourceName: "plus_unselected"), rootViewController: ImageSelectorController())
     let notifications = templateNavigationController(unselectedImage: #imageLiteral(resourceName: "like_unselected"), selectedImage: #imageLiteral(resourceName: "like_selected"), rootViewController: NotificationController())
