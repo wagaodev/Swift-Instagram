@@ -60,7 +60,7 @@ class LoginController: UIViewController {
     super.viewDidLoad()
     
     configureUI()
-    configureNotificationObservers()
+
   }
   
   // MARK: - API
@@ -95,6 +95,7 @@ class LoginController: UIViewController {
   
   func configureUI() {
     configureGradientLayer()
+    configureNotificationObservers()
     navigationController?.navigationBar.isHidden = true
     navigationController?.navigationBar.barStyle = .black
     
