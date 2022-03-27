@@ -25,6 +25,8 @@ class Utilities {
     tf.setHeight(50)
     tf.backgroundColor = UIColor(white: 1, alpha: 0.1)
     tf.font = UIFont.systemFont(ofSize: 16)
+    tf.autocorrectionType = .no
+    tf.autocapitalizationType = .none
     tf.keyboardAppearance = .dark
     tf.attributedPlaceholder = NSAttributedString(string: placeholder,
                                                   attributes: [NSAttributedString.Key.foregroundColor: UIColor(white: 1, alpha: 0.7)])
