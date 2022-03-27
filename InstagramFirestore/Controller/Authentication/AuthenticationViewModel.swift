@@ -1,7 +1,16 @@
 import UIKit
 
+protocol FormViewModel {
+  func updateForm()
+}
 
-struct LoginViewModel {
+protocol AuthenticationViewModel {
+  var formIsValid: Bool { get }
+  var buttonBackgroundColor: UIColor { get }
+  var buttonTitleColor: UIColor { get }
+}
+
+struct LoginViewModel: AuthenticationViewModel {
   var email: String?
   var password: String?
 
@@ -18,7 +27,7 @@ struct LoginViewModel {
   }
 }
 
-struct RegistrationViewModel {
+struct RegistrationViewModel: AuthenticationViewModel {
   var email: String?
   var password: String?
   var fullName: String?

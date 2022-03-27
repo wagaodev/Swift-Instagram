@@ -97,9 +97,7 @@ class RegistrationController: UIViewController {
     } else {
       viewModel.username = sender.text
     }
-    registrationButton.backgroundColor = viewModel.buttonBackgroundColor
-    registrationButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
-    registrationButton.isEnabled = viewModel.formIsValid
+    updateForm()
   }
   
   
@@ -136,5 +134,14 @@ class RegistrationController: UIViewController {
     passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     fullNameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     usernameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+  }
+}
+  // MARK: - FormViewModel
+
+extension RegistrationController: FormViewModel {
+  func updateForm() {
+    registrationButton.backgroundColor = viewModel.buttonBackgroundColor
+    registrationButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
+    registrationButton.isEnabled = viewModel.formIsValid
   }
 }
