@@ -8,18 +8,21 @@ class Utilities {
     view.addSubview(textField)
     textField.anchor(left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingBottom: 8)
 
-
-
     return view
   }
 
   func textField(withPlaceholder placeholder: String) -> UITextField {
     let tf = UITextField()
+    let spacer = UIView()
     tf.textColor = .white
+    tf.layer.cornerRadius = 8
     tf.autocapitalizationType = .none
     tf.borderStyle = .none
-    tf.backgroundColor = UIColor(white: 1, alpha: 0.1)
+    spacer.setDimensions(height: 50, width: 12)
+    tf.leftView = spacer
+    tf.leftViewMode = .always
     tf.setHeight(50)
+    tf.backgroundColor = UIColor(white: 1, alpha: 0.1)
     tf.font = UIFont.systemFont(ofSize: 16)
     tf.keyboardAppearance = .dark
     tf.attributedPlaceholder = NSAttributedString(string: placeholder,
@@ -31,8 +34,9 @@ class Utilities {
   func atttributedButton(_ fristPart: String, _ secondPart: String) -> UIButton {
     let button = UIButton(type: .system)
 
-    let attributedTitle = NSMutableAttributedString(string: fristPart, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16),
-                                                                                    NSAttributedString.Key.foregroundColor: UIColor(white: 1, alpha: 0.7)])
+    let attributedTitle = NSMutableAttributedString(string: fristPart,
+                                                    attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16),
+                                                    NSAttributedString.Key.foregroundColor: UIColor(white: 1, alpha: 0.7)])
 
     attributedTitle.append(NSAttributedString(string: secondPart, attributes: [NSMutableAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16),
                                                                                     NSMutableAttributedString.Key.foregroundColor: UIColor.white]))
