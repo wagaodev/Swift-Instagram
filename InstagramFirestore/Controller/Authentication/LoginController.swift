@@ -47,13 +47,7 @@ class LoginController: UIViewController {
   }()
 
   private lazy var loginButton: UIButton = {
-    let button = UIButton(type: .system)
-    button.setTitle("Log In", for: .normal)
-    button.setTitleColor(.white, for: .normal)
-    button.backgroundColor = #colorLiteral(red: 0.3323569142, green: 0.2387397452, blue: 0.739278577, alpha: 1)
-    button.heightAnchor.constraint(equalToConstant: 50).isActive = true
-    button.layer.cornerRadius = 8
-    button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+    let button = Utilities().actionButton("Log In")
     button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
     return button
   }()
@@ -75,7 +69,8 @@ class LoginController: UIViewController {
   }
 
   @objc func handleNavigateToSignUp() {
-    print("DEBUG: Navigation to create account...")
+    let controller = RegistrationController()
+    navigationController?.pushViewController(controller, animated: true)
   }
 
   @objc func handleForgotPassword() {
@@ -85,24 +80,15 @@ class LoginController: UIViewController {
   // MARK: - Helpers
 
   func configureUI() {
-
+    configureGradientLayer()
     navigationController?.navigationBar.isHidden = true
     navigationController?.navigationBar.barStyle = .black
 
-
-    let gradient = CAGradientLayer()
-    gradient.colors = [UIColor.systemIndigo.cgColor, UIColor.systemPink.cgColor]
-    gradient.locations = [0.35, 1]
-    view.layer.addSublayer(gradient)
-    gradient.frame = view.frame
-
     view.addSubview(logoImageView)
     logoImageView.centerX(inView: view, topAnchor: view.safeAreaLayoutGuide.topAnchor)
-    logoImageView.setDimensions(height: 150, width: 150) 
+    logoImageView.setDimensions(height: 150, width: 150)
 
     let stack = UIStackView(arrangedSubviews: [emailContainerView, passwordContainerView, loginButton, forgotPassword])
-
-
     stack.axis = .vertical
     stack.spacing = 20
     stack.distribution = .fillEqually
