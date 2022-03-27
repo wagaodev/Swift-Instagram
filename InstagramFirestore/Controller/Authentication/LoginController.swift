@@ -3,6 +3,8 @@ import UIKit
 class LoginController: UIViewController {
   
   // MARK: - Properties
+
+  private var viewModel = LoginViewModel()
   
   private let logoImageView: UIImageView = {
     let logo = UIImageView()
@@ -58,6 +60,7 @@ class LoginController: UIViewController {
     super.viewDidLoad()
     
     configureUI()
+    configureNotificationObservers()
   }
   
   // MARK: - API
@@ -75,6 +78,17 @@ class LoginController: UIViewController {
   
   @objc func handleForgotPassword() {
     print("DEBUG: Navigation to forgot password screen...")
+  }
+
+  @objc func textDidChange(sender: UITextField) {
+    if sender == emailTextField {
+      viewModel.email = sender.text
+    } else {
+      viewModel.password = sender.text
+    }
+    loginButton.backgroundColor = viewModel.buttonBackgroundColor
+    loginButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
+    loginButton.isEnabled = viewModel.formIsValid
   }
   
   // MARK: - Helpers
@@ -99,8 +113,11 @@ class LoginController: UIViewController {
     view.addSubview(dontHaveAccountButton)
     dontHaveAccountButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor,
                                  right: view.rightAnchor, paddingLeft: 50, paddingBottom: 16, paddingRight: 40)
-    
-    
+
   }
-  
+
+  func configureNotificationObservers() {
+    emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+    passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+  }
 }
