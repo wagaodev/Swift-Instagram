@@ -21,6 +21,8 @@
 		D7A844BF27EEC8BF0062D461 /* ImageSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A844BE27EEC8BF0062D461 /* ImageSelectorController.swift */; };
 		D7A844C127EEC8CA0062D461 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A844C027EEC8CA0062D461 /* ProfileController.swift */; };
 		D7A844C327EEC8D70062D461 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A844C227EEC8D70062D461 /* NotificationController.swift */; };
+		D7AB0EB527EFB673005835AF /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AB0EB427EFB673005835AF /* LoginController.swift */; };
+		D7AB0EB727EFBA52005835AF /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AB0EB627EFBA52005835AF /* Utilities.swift */; };
 		D7D46CFC27EF0E4C00D2EA66 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D46CFB27EF0E4C00D2EA66 /* FeedCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,8 @@
 		D7A844BE27EEC8BF0062D461 /* ImageSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectorController.swift; sourceTree = "<group>"; };
 		D7A844C027EEC8CA0062D461 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		D7A844C227EEC8D70062D461 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		D7AB0EB427EFB673005835AF /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		D7AB0EB627EFBA52005835AF /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = InstagramFirestore/Controller/Utilities.swift; sourceTree = SOURCE_ROOT; };
 		D7D46CFB27EF0E4C00D2EA66 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				D73D7B2A27EF15570051CACC /* Extensions.swift */,
+				D7AB0EB627EFBA52005835AF /* Utilities.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 				D7A844BE27EEC8BF0062D461 /* ImageSelectorController.swift */,
 				D7A844C227EEC8D70062D461 /* NotificationController.swift */,
 				D7A844C027EEC8CA0062D461 /* ProfileController.swift */,
+				D7AB0EB427EFB673005835AF /* LoginController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -240,8 +246,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7A844A027EEC3C80062D461 /* ViewController.swift in Sources */,
+				D7AB0EB527EFB673005835AF /* LoginController.swift in Sources */,
 				D7D46CFC27EF0E4C00D2EA66 /* FeedCell.swift in Sources */,
 				D7A844BF27EEC8BF0062D461 /* ImageSelectorController.swift in Sources */,
+				D7AB0EB727EFBA52005835AF /* Utilities.swift in Sources */,
 				D7A844BD27EEC8B10062D461 /* SearchController.swift in Sources */,
 				D7A8449C27EEC3C80062D461 /* AppDelegate.swift in Sources */,
 				D7A844BB27EEC8A70062D461 /* FeedController.swift in Sources */,
