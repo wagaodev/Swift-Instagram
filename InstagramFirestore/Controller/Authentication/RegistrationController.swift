@@ -44,11 +44,12 @@ class RegistrationController: UIViewController {
   
   private let fullNameTextField: UITextField = {
     let tf = Utilities().textField(withPlaceholder: "Fullname")
+    tf.autocapitalizationType = .words
     return tf
   }()
   
   private let usernameTextField: UITextField = {
-    let tf = Utilities().textField(withPlaceholder: "Username")
+    let tf = Utilities().textField(withPlaceholder: "Username") 
     return tf
   }()
   
