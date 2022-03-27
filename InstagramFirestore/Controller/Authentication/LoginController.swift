@@ -25,13 +25,12 @@ class LoginController: UIViewController {
 
   private let emailTextField: UITextField = {
     let tf = Utilities().textField(withPlaceholder: "Email")
-    tf.tintColor = .systemIndigo
-
     return tf
   }()
 
   private let passwordTextField: UITextField = {
     let tf = Utilities().textField(withPlaceholder: "Password")
+    tf.isSecureTextEntry = true
     return tf
   }()
 
@@ -51,7 +50,7 @@ class LoginController: UIViewController {
     let button = UIButton(type: .system)
     button.setTitle("Log In", for: .normal)
     button.setTitleColor(.white, for: .normal)
-    button.backgroundColor = .systemBlue
+    button.backgroundColor = #colorLiteral(red: 0.3323569142, green: 0.2387397452, blue: 0.739278577, alpha: 1)
     button.heightAnchor.constraint(equalToConstant: 50).isActive = true
     button.layer.cornerRadius = 8
     button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
@@ -86,7 +85,11 @@ class LoginController: UIViewController {
   // MARK: - Helpers
 
   func configureUI() {
+
     navigationController?.navigationBar.isHidden = true
+    navigationController?.navigationBar.barStyle = .black
+
+
     let gradient = CAGradientLayer()
     gradient.colors = [UIColor.systemIndigo.cgColor, UIColor.systemPink.cgColor]
     gradient.locations = [0.35, 1]
@@ -95,7 +98,7 @@ class LoginController: UIViewController {
 
     view.addSubview(logoImageView)
     logoImageView.centerX(inView: view, topAnchor: view.safeAreaLayoutGuide.topAnchor)
-    logoImageView.setDimensions(height: 150, width: 150)
+    logoImageView.setDimensions(height: 150, width: 150) 
 
     let stack = UIStackView(arrangedSubviews: [emailContainerView, passwordContainerView, loginButton, forgotPassword])
 
