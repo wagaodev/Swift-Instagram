@@ -86,7 +86,12 @@ class LoginController: UIViewController {
   // MARK: - Helpers
 
   func configureUI() {
-    view.backgroundColor = .systemIndigo
+    navigationController?.navigationBar.isHidden = true
+    let gradient = CAGradientLayer()
+    gradient.colors = [UIColor.systemIndigo.cgColor, UIColor.systemPink.cgColor]
+    gradient.locations = [0.35, 1]
+    view.layer.addSublayer(gradient)
+    gradient.frame = view.frame
 
     view.addSubview(logoImageView)
     logoImageView.centerX(inView: view, topAnchor: view.safeAreaLayoutGuide.topAnchor)
@@ -103,7 +108,8 @@ class LoginController: UIViewController {
     stack.anchor(top: logoImageView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingLeft: 32, paddingRight: 32)
 
     view.addSubview(dontHaveAccountButton)
-    dontHaveAccountButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingLeft: 50, paddingBottom: 16, paddingRight: 40)
+    dontHaveAccountButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor,
+                                 right: view.rightAnchor, paddingLeft: 50, paddingBottom: 16, paddingRight: 40)
 
 
   }
