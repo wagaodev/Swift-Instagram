@@ -5,6 +5,7 @@ disabled_rules: # rule identifiers to exclude from running
   - vertical_whitespace
   - opening_brace
   - leading_whitespace
+  - trailing_whitespace
 identifier_name:
   allowed_symbols: "_"
 line_length:
