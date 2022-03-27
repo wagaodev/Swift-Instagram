@@ -81,8 +81,7 @@ class RegistrationController: UIViewController {
   }
   
   @objc func handleNavigateToLogin() {
-    let controller = LoginController()
-    navigationController?.pushViewController(controller, animated: true)
+    navigationController?.popViewController(animated: true)
   }
   
   
