@@ -5,7 +5,7 @@ class RegistrationController: UIViewController {
   // MARK: - Properties
 
   private let photoButton: UIButton = {
-    let button = UIButton()
+    let button = UIButton(type: .system)
     button.setImage(#imageLiteral(resourceName: "plus_photo"), for: .normal)
     button.tintColor = .white
     return button
@@ -110,7 +110,6 @@ class RegistrationController: UIViewController {
     view.addSubview(alreadyHaveAccount)
     alreadyHaveAccount.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor,
                                  right: view.rightAnchor, paddingLeft: 50, paddingBottom: 16, paddingRight: 40)
-
 
   }
 

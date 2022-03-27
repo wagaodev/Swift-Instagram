@@ -4,6 +4,7 @@ import JGProgressHUD
 extension UIViewController {
     static let hud = JGProgressHUD(style: .dark)
 
+
   func configureGradientLayer(){
     let gradient = CAGradientLayer()
     gradient.colors = [UIColor.systemIndigo.cgColor, UIColor.systemPink.cgColor]
