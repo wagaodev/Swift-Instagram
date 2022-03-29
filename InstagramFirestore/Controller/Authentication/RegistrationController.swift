@@ -10,6 +10,7 @@ class RegistrationController: UIViewController {
     let button = UIButton(type: .system)
     button.setImage(#imageLiteral(resourceName: "plus_photo"), for: .normal)
     button.tintColor = .white
+    button.addTarget(self, action: #selector(handleUploadPhoto), for: .touchUpInside)
     return button
   }()
   
@@ -82,6 +83,14 @@ class RegistrationController: UIViewController {
   @objc func handleRegister() {
     print("DEBUG: botão de login...")
   }
+
+  @objc func handleUploadPhoto() {
+    let picker = UIImagePickerController()
+    picker.delegate = self
+    picker.allowsEditing = true
+
+    present(picker, animated: true, completion: nil)
+  }
   
   @objc func handleNavigateToLogin() {
     navigationController?.popViewController(animated: true)
@@ -99,6 +108,7 @@ class RegistrationController: UIViewController {
     }
     updateForm()
   }
+
   
   
   // MARK: - Helpers
@@ -143,5 +153,21 @@ extension RegistrationController: FormViewModel {
     registrationButton.backgroundColor = viewModel.buttonBackgroundColor
     registrationButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
     registrationButton.isEnabled = viewModel.formIsValid
+  }
+}
+
+  // MARK: - UIImagePickerControllerDelegate
+
+extension RegistrationController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    guard let selectedImage = info[.editedImage] as? UIImage else { return }
+
+    photoButton.layer.cornerRadius = photoButton.frame.width / 2
+    photoButton.layer.masksToBounds = true
+    photoButton.layer.borderColor = UIColor.white.cgColor
+    photoButton.layer.borderWidth = 2
+    photoButton.setImage(selectedImage.withRenderingMode(.alwaysOriginal), for: .normal)
+
+    self.dismiss(animated: true, completion: nil)
   }
 }
