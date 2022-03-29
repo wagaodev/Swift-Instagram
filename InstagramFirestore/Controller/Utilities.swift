@@ -51,9 +51,12 @@ class Utilities {
                                                                  NSAttributedString.Key.foregroundColor: UIColor.white])
     button.setAttributedTitle(attributedTitle, for: .normal)
     button.setTitleColor(.white, for: .normal)
-    button.backgroundColor = #colorLiteral(red: 0.3323569142, green: 0.2387397452, blue: 0.739278577, alpha: 1)
+    button.backgroundColor = #colorLiteral(red: 0.2650587104, green: 0.1903978713, blue: 0.5895837213, alpha: 1).withAlphaComponent(0.3)
+    button.isEnabled = false
     button.heightAnchor.constraint(equalToConstant: 50).isActive = true
     button.layer.cornerRadius = 8
+    
+    
     return button
   }
 }
