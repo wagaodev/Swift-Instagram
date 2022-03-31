@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>757264555188-nnsh0f481h9ongelj8fgh82rob3mofss.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.757264555188-nnsh0f481h9ongelj8fgh82rob3mofss</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBO8T2UgxL3IwOzVPCCJoeKZOROgiNth5k</string>
+	<key>GCM_SENDER_ID</key>
+	<string>757264555188</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>wagner.goulart.InstagramFirestore</string>
+	<key>PROJECT_ID</key>
+	<string>wcfx-instagram</string>
+	<key>STORAGE_BUCKET</key>
+	<string>wcfx-instagram.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:757264555188:ios:074472083ca72c0023cbe1</string>
+</dict>
+</plist>
