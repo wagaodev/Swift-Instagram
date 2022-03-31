@@ -5,6 +5,7 @@ class RegistrationController: UIViewController {
   // MARK: - Properties
 
   private var viewModel = RegistrationViewModel()
+  private var profileImage: UIImage?
   
   private let photoButton: UIButton = {
     let button = UIButton(type: .system)
@@ -64,7 +65,7 @@ class RegistrationController: UIViewController {
   
   private lazy var registrationButton: UIButton = {
     let button = Utilities().actionButton("Sign Up")
-    button.addTarget(self, action: #selector(handleRegister), for: .touchUpInside)
+    button.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
     return button
   }()
   
@@ -80,8 +81,16 @@ class RegistrationController: UIViewController {
   
   // MARK: - Selectors
   
-  @objc func handleRegister() {
-    print("DEBUG: botão de login...")
+  @objc func handleSignUp() {
+
+    guard let email = emailTextField.text else { return }
+    guard let password = passwordTextField.text else { return }
+    guard let fullname = fullNameTextField.text else { return }
+    guard let username = usernameTextField.text else { return }
+
+    AuthService.registerUser(withCredentials: <#T##AuthCredentials#>)
+
+
   }
 
   @objc func handleUploadPhoto() {
@@ -161,6 +170,7 @@ extension RegistrationController: FormViewModel {
 extension RegistrationController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
     guard let selectedImage = info[.editedImage] as? UIImage else { return }
+    profileImage = selectedImage
 
     photoButton.layer.cornerRadius = photoButton.frame.width / 2
     photoButton.layer.masksToBounds = true
