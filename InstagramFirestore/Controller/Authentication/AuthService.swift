@@ -8,12 +8,12 @@ struct AuthCredentials {
   let password: String
   let fullname: String
   let username: String
-  let profileImage: String
+  let profileImage: UIImage
 }
 
 
 struct AuthService {
   static func registerUser(withCredentials credentials: AuthCredentials){
-    
+    print("DEBUG: Credentials are \(credentials)")
   }
 }

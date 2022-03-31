@@ -87,8 +87,11 @@ class RegistrationController: UIViewController {
     guard let password = passwordTextField.text else { return }
     guard let fullname = fullNameTextField.text else { return }
     guard let username = usernameTextField.text else { return }
+    guard let profileImage = self.profileImage else { return }
 
-    AuthService.registerUser(withCredentials: <#T##AuthCredentials#>)
+    let credentials =  AuthCredentials(email: email, password: password, fullname: fullname, username: username, profileImage: profileImage)
+
+    AuthService.registerUser(withCredentials: credentials)
 
 
   }
@@ -132,6 +135,7 @@ class RegistrationController: UIViewController {
     photoButton.centerX(inView: view)
     photoButton.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
     photoButton.setDimensions(height: 140, width: 140)
+   
     
     let stack = UIStackView(arrangedSubviews: [emailContainerView, passwordContainerView,
                                                fullnameContainerView, usernameContainerView, registrationButton])
